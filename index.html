@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | CSE Student & Developer</title>
+  <meta name="description"
+    content="Portfolio of a passionate Computer Science and Engineering student specializing in software development, creating beautiful and scalable applications." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-glow"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="admin.html" class="logo" title="Click here to open Portfolio Editor & Admin Dashboard">L/<span
+          class="accent">N</span></a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact" class="btn-primary-small">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero fade-in">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="eyebrow fade-up">👋 Welcome to my digital space</span>
+          <h1 class="fade-up stagger-1">
+            Lakshya Nunia
+          </h1>
+          <p class="fade-up stagger-2">
+            I'm a passionate CSE student with Data Science and Web Development skills.
+          </p>
+          <div class="cta-group fade-up stagger-3">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="CV Lakshya.pdf" class="btn-primary" download>Download CV</a>
+            <a href="#contact" class="btn-primary">Let's Talk</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper fade-up stagger-2">
+          <div class="image-frame glass-panel">
+            <!-- Replace 'profile.jpg' with your actual image file name -->
+            <img src="my-profile-photo.jpeg" alt="Profile Picture" class="profile-img" id="profileImage">
+          </div>
+          <div class="location-badge glass-panel" id="heroLocationBadge">
+            <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span id="heroLocationText">Based in - INDIA</span>
+          </div>
+          <!-- Decorative elements behind image -->
+          <div class="glow-orb red"></div>
+          <div class="glow-orb blue"></div>
+        </div>
+      </div>
+
+      <!-- Abstract background shape -->
+      <div class="hero-blob"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container reveal">
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a Computer Science undergraduate specializing in Data Science with a strong interest in software
+              development,
+              data analysis, and problem solving. I actively practice Data Structures and Algorithms and work on
+              projects that
+              enhance my technical skills in programming and data-driven technologies. I enjoy learning new
+              technologies,
+              building practical solutions, and continuously improving my skills to grow as a software developer and
+              data professional.
+              When I'm not studying algorithms or debugging code, I'm exploring new web technologies or contributing to
+              open source.
+            </p>
+            <div class="stats">
+              <div class="stat-item">
+                <h3>2+</h3>
+                <p>Years Coding</p>
+              </div>
+              <div class="stat-item">
+                <h3>5+</h3>
+                <p>Projects Built</p>
+              </div>
+              <div class="stat-item">
+                <h3>LeetCode</h3>
+                <p>200+ Problems Solved</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-card glass-panel">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">-></span> WhoAmI</p>
+              <p class="output">CSE Student | Data Science</p>
+              <p><span class="prompt">-></span> Interests</p>
+              <p class="output">[ "Data Science", "Data analysis", "Competitive Programming", "AI/ML"]</p>
+              <p><span class="prompt">-></span> Status</p>
+              <p class="output">Ready for new challenges! 🚀</p>
+              <span class="cursor-blink">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+      <div class="container reveal">
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <div class="education-timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - Present</div>
+            <div class="timeline-content">
+              <h3>B.Tech in Computer Science and Engineering -(6.8 CGPA)</h3>
+              <h4>Lovely Professional University</h4>
+              <p>Specialization in Data Science. Maintaining a strong academic record while actively learning new
+                technologies and strengthening problem-solving skills.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 - 2022</div>
+            <div class="timeline-content">
+              <h3>Class XII -(87.5 %)</h3>
+              <h4>Jeevani International School</h4>
+              <p>Completed higher secondary education with a focus on PCM.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019 - 2020</div>
+            <div class="timeline-content">
+              <h3>Class X -(86 %)</h3>
+              <h4>Jeevani International School</h4>
+              <p>Completed secondary education with a focus on CBSE board.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="training section">
+      <div class="container reveal">
+        <h2 class="section-title">Technical <span class="accent">Training</span></h2>
+        <div class="training-grid">
+          <!-- Training Item 1 -->
+          <div class="training-card glass-panel">
+            <div class="training-icon">🎓</div>
+            <div class="training-content">
+              <div class="training-date">June 2025 - July 2025</div>
+              <h3>DSA with Java</h3>
+              <h4>CipherSchool</h4>
+              <p>Learned fundamental data structures and algorithms using Java, focusing on problem-solving techniques
+                and competitive programming.</p>
+              <div class="skill-tags">
+                <span>Java</span>
+                <span>DSA</span>
+              </div>
+            </div>
+          </div>
+          <!-- Training Item 2 -->
+          <div class="training-card glass-panel">
+            <div class="training-icon">📊</div>
+            <div class="training-content">
+              <div class="training-date">Jan 2026 - Feb 2026</div>
+              <h3>DSA with C++ and Software Testing</h3>
+              <h4>Lovely Professional University</h4>
+              <p>Solved Leetcode and Learned fundamental data structures and algorithms using C++, focusing on
+                problem-solving techniques and optimizing codes
+                and learned alot about software testing.</p>
+              <div class="skill-tags">
+                <span>C++</span>
+                <span>DSA</span>
+                <span>Software Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container reveal">
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <div class="skills-grid">
+          <!-- data science -->
+          <div class="skill-category glass-panel">
+            <h3>Data Science</h3>
+            <div class="skill-tags">
+              <span>MS-Excel</span>
+              <span>PowerBI</span>
+              <span>Python</span>
+              <span>SQL/MySQL</span>
+            </div>
+          </div>
+          <!-- Languages -->
+          <div class="skill-category glass-panel">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="highlight">★ Java</span>
+              <span>Python</span>
+              <span>C</span>
+              <span>C++</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>SQL/MySQL</span>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="skill-category glass-panel">
+            <h3>Tools & Others</h3>
+            <div class="skill-tags">
+              <span>Git & GitHub</span>
+              <span>Tableau</span>
+              <span>JetBrains</span>
+              <span>VS Code</span>
+              <span>Blender</span>
+              <span>Unity</span>
+              <span>LeetCode</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container reveal">
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel">
+            <div class="project-image">
+              <img src="covid_analysis.png" alt="Covid-19 Impact Analysis Dashboard">
+            </div>
+            <div class="project-content">
+              <span class="project-type">Data Science</span>
+              <h3>Covid-19 impact analysis and visualisation</h3>
+              <p>A data science project that analyzes the impact of Covid-19 on the world. It uses
+                python, pandas, matplotlib and seaborn to analyze the impact of Covid-19 on the world.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Metplotlib</span>
+                <span>Seaborn</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7317113184006426624/?originTrackingId=1NIo6%2FyJUj%2BRcLZesQExZQ%3D%3D"
+                  class="link-btn">View Analysis ↗</a>
+                <a href="https://github.com/Lakshyanunia/Covid-19-impact-analysis-and-visualisation-"
+                  class="link-btn outline">GitHubSource </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-panel">
+            <div class="project-image">
+              <img src="traffic_dashboard.png" alt="Traffic Crash Analysis Dashboard">
+            </div>
+            <div class="project-content">
+              <span class="project-type">Power BI</span>
+              <h3>Traffic Crash Analysis Dashboard</h3>
+              <p>A dashboard that analyzes the traffic crash data which focuses on understanding crash patterns, injury
+                severity, and risk factors to support data‑driven road safety decisions.
+
+              </p>
+              <div class="project-tech">
+                <span>Power BI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406067070968414208/?originTrackingId=cHg56Dsggj5GqlMoAlv2hA%3D%3D"
+                  class="link-btn">View Analysis ↗</a>
+                <a href="https://github.com/Lakshyanunia/Traffic-Crash-Analysis-Dashboard-using-PowerBI"
+                  class="link-btn outline">GitHub Source</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-panel">
+            <div class="project-image">
+              <img src="sales_profit.png" alt="Sales and Profit Analysis Dashboard">
+            </div>
+            <div class="project-content">
+              <span class="project-type">Dashboard</span>
+              <h3>Sales and Profit Analysis</h3>
+              <p>A dashboard that analyzes the sales and profit of a company. It uses
+                MS-Excel to analyze the sales and profit of a company.
+              </p>
+              <div class="project-tech">
+                <span>MS-Excel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7317241496477306881/?originTrackingId=pM7km9kjJEhJhlObMNwNIw%3D%3D"
+                  class="link-btn">View Analysis ↗</a>
+                <a href="https://github.com/Lakshyanunia/Sales-and-Profit-using-excel" class="link-btn outline">GitHub
+                  Source</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+      <div class="container reveal">
+        <h2 class="section-title">Key <span class="accent">Achievements</span></h2>
+        <div class="achievements-list">
+          <!-- Achievement 1 -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge">🏆</div>
+            <div class="achievement-content">
+              <div class="achievement-date">2026</div>
+              <h3>LeetCode ranking </h3>
+              <p>Ranking < 6.5L </p>
+            </div>
+          </div>
+          <!-- Achievement 2 -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge">⭐</div>
+            <div class="achievement-content">
+              <div class="achievement-date">2026</div>
+              <h3>Coding Milestone in LeetCode</h3>
+              <p>Solved 200+ problems on LeetCode with a focus on Data Structures and Algorithms, and got a 50 active
+                days
+                badge 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates section">
+      <div class="container reveal">
+        <h2 class="section-title">My <span class="accent">Certificates</span></h2>
+        <div class="certificates-grid">
+          <!-- Certificate 1 -->
+          <div class="certificate-card glass-panel">
+            <div class="cert-icon"><img src="cipherschool.png" alt="CipherSchool Logo"></div>
+            <div class="certificate-content">
+              <div class="certificate-year">June 2025 - July 2025</div>
+              <h3>Data Structures and Algorithms with Java</h3>
+              <p><i>CipherSchool</i></p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="Lakshya_Nunia_Cipher_dsa.pdf" class="link-btn">View Certificate ↗</a>
+                <a href="https://www.cipherschools.com/certificate/preview?id=689f0b29ab59d1f6d4952825"
+                  class="link-btn outline">Link ↗</a>
+              </div>
+            </div>
+          </div>
+          <!-- Certificate 2 -->
+          <div class="certificate-card glass-panel">
+            <div class="cert-icon"><img src="cipherschool.png" alt="CipherSchool Logo"></div>
+            <div class="certificate-content">
+              <div class="certificate-year">June 2025 - July 2025</div>
+              <h3>Git & GitHub </h3>
+              <p><i>CipherSchool</i></p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="Lakshya_Nunia_Cipher_github.pdf" class="link-btn">View Certificate ↗</a>
+                <a href="https://www.cipherschools.com/certificate/preview?id=686398f0bb08f7190c806aaf"
+                  class="link-btn outline">Link ↗</a>
+              </div>
+            </div>
+          </div>
+          <!-- Certificate 3 -->
+          <div class="certificate-card glass-panel">
+            <div class="cert-icon"><img src="springboard-logo.avif" alt="Infosys Springboard Logo"></div>
+            <div class="certificate-content">
+              <div class="certificate-year">Aug' 2025 - Sep' 2025</div>
+              <h3>Infosys Springboard</h3>
+              <p><i>Infosys</i></p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="Infosys Springboard.pdf" class="link-btn">View Certificate ↗</a>
+                <a href="https://infyspringboard.onwingspan.com/" class="link-btn outline">Link ↗</a>
+              </div>
+            </div>
+          </div>
+          <!-- Certificate 4 -->
+          <div class="certificate-card glass-panel">
+            <div class="cert-icon"><img src="boardinfinity.png" alt="Board Infinity Logo"></div>
+            <div class="certificate-content">
+              <div class="certificate-year">Jan' 2024 - Feb' 2024</div>
+              <h3> Microlearning in Data Structures & Algorithms</h3>
+              <p><i>Board Infinity</i></p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="Boardinfinitymooc.pdf" class="link-btn">View Certificate ↗</a>
+                <a href="https://www.boardinfinity.com/lms/data-structures-and-algorithms-course-with-certification-free-recxYLAeICZ88qzpy/certificate"
+                  class="link-btn outline">Link ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container reveal">
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+
+        <div class="contact-container">
+          <!-- Left: Contact Info -->
+          <div class="contact-info glass-panel">
+            <h3>Let's talk</h3>
+            <p>I'm currently looking for internship opportunities and exciting freelance projects. Whether you have a
+              question or just want to say hi, I'll try my best to get back to you!</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="icon">📧</span>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:hello@example.com">luckylakshya@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Phagwara, Punjab</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links left-aligned">
+              <a href="https://github.com/Lakshyanunia" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/lakshyanunia" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="https://leetcode.com/u/Lakshyanunia/" target="_blank" rel="noopener noreferrer"
+                aria-label="LeetCode">
+                <svg role="img" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.543l3.995 3.979 3.331 3.141c.289.27.68.428 1.085.428.405 0 .796-.158 1.085-.428l2.15-2.025c.289-.271.455-.638.455-1.02 0-.383-.166-.75-.455-1.021l-3.33-3.142-3.996-3.978c-.289-.27-.454-.638-.454-1.02 0-.383.165-.75.454-1.02l3.854-4.128 5.406-5.787c.289-.271.455-.638.455-1.021 0-.383-.166-.75-.455-1.02l-2.15-2.026c-.289-.27-.68-.428-1.085-.428zM19.349 14.128l-8.487 8.094a1.867 1.867 0 0 1-1.312.56 1.884 1.884 0 0 1-1.31-.56l-2.493-2.316c-.347-.323-.52-.751-.52-1.229 0-.476.173-.903.52-1.226l8.487-8.093c.348-.323.82-.507 1.311-.507.49 0 .963.184 1.312.507l2.492 2.315c.347.323.52.752.52 1.229 0 .476-.173.903-.52 1.226z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Right: Contact Form -->
+          <form class="contact-form glass-panel" id="contactForm" action="https://formspree.io/f/mvzweygw"
+            method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="E.g., Lakshya Nunia" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="[EMAIL_ADDRESS]" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">Send Message 🚀</button>
+            <p id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Designed & Built by Lakshya Nunia.</p>
+  </footer>
+
+  <script src="js/portfolio-data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

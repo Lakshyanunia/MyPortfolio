@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Admin Dashboard & Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <!-- Login Security Modal Overlay -->
+  <div id="pinModal" class="modal-overlay">
+    <div class="pin-card glass-panel">
+      <div class="pin-icon">🔐</div>
+      <h2>Admin Login Access</h2>
+      <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.9rem;">
+        Enter your Admin credentials to unlock dashboard management.
+      </p>
+      <form id="pinForm" style="margin-top: 1.5rem;">
+        <div class="form-group" style="margin-bottom: 1rem; text-align: left;">
+          <label for="usernameInput" style="font-size: 0.85rem; display: block; margin-bottom: 0.3rem; color: var(--text-secondary);">Username</label>
+          <input type="text" id="usernameInput" class="form-control" placeholder="Admin username" required autofocus>
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem; text-align: left;">
+          <label for="passwordInput" style="font-size: 0.85rem; display: block; margin-bottom: 0.3rem; color: var(--text-secondary);">Password</label>
+          <input type="password" id="passwordInput" class="form-control" placeholder="••••••••" required>
+        </div>
+        <div id="pinError" style="color: var(--danger); font-size: 0.85rem; display: none; margin-bottom: 1rem;">Incorrect username or password. Please try again.</div>
+        <button type="submit" class="btn-accent" style="width: 100%;">Unlock Dashboard 🔓</button>
+      </form>
+      <div style="margin-top: 1.5rem;">
+        <a href="index.html" class="link-btn outline" style="font-size: 0.85rem;">← Back to Portfolio Website</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Admin Interface -->
+  <div id="adminApp" class="hidden">
+
+    <!-- Top Admin Navbar -->
+    <nav class="admin-nav">
+      <div class="admin-logo">
+        <a href="index.html" style="color: inherit; text-decoration: none;">L/<span class="accent">N</span></a>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-secondary btn-sm" aria-label="Toggle Theme">🌓 Mode</button>
+        <button id="lockBtn" class="btn-secondary btn-sm">🔒 Lock Panel</button>
+      </div>
+    </nav>
+
+    <!-- Admin Dashboard Main Layout -->
+    <div class="admin-layout">
+
+      <!-- Left Sidebar Navigation -->
+      <aside class="admin-sidebar glass-panel">
+        <div class="sidebar-title">Content Sections</div>
+        <div class="tab-list">
+          <button class="tab-btn active" data-tab="heroTab">🚀 Hero & Header</button>
+          <button class="tab-btn" data-tab="aboutTab">👤 About Me & Stats</button>
+          <button class="tab-btn" data-tab="educationTab">🎓 Education</button>
+          <button class="tab-btn" data-tab="trainingTab">📊 Training</button>
+          <button class="tab-btn" data-tab="skillsTab">⚡ Technical Skills</button>
+          <button class="tab-btn" data-tab="projectsTab">💻 Featured Projects</button>
+          <button class="tab-btn" data-tab="achievementsTab">🏆 Key Achievements</button>
+          <button class="tab-btn" data-tab="certificatesTab">📜 My Certificates</button>
+          <button class="tab-btn" data-tab="contactTab">📧 Contact & Socials</button>
+          <button class="tab-btn" data-tab="settingsTab">⚙️ Security & Backup</button>
+        </div>
+      </aside>
+
+      <!-- Right Main Editor Area -->
+      <main class="admin-content">
+
+        <!-- 1. HERO TAB -->
+        <div id="heroTab" class="tab-pane active glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Hero Section</h2>
+              <p class="pane-subtitle">Update your welcome banner, main title, tagline, and profile picture</p>
+            </div>
+          </div>
+          <form id="heroForm">
+            <div class="form-group">
+              <label for="heroWelcome">Eyebrow / Welcome Tag</label>
+              <input type="text" id="heroWelcome" class="form-control" placeholder="👋 Welcome to my digital space">
+            </div>
+            <div class="form-group">
+              <label for="heroName">Your Full Name</label>
+              <input type="text" id="heroName" class="form-control" placeholder="Lakshya Nunia">
+            </div>
+            <div class="form-group">
+              <label for="heroTagline">Tagline / Bio Summary</label>
+              <textarea id="heroTagline" class="form-control" rows="3" placeholder="I'm a passionate CSE student..."></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="heroProfileImg">Profile Image Path / URL</label>
+                <input type="text" id="heroProfileImg" class="form-control" placeholder="my-profile-photo.jpeg">
+                <div class="image-preview-wrapper">
+                  <img id="heroImgPreview" src="my-profile-photo.jpeg" alt="Profile Preview" class="image-preview">
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Preview</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="heroLocationInput">Location Badge Tag (under Profile Picture)</label>
+                <input type="text" id="heroLocationInput" class="form-control" placeholder="📍 Based in INDIA 🇮🇳">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="heroContactText">Contact Button Label</label>
+              <input type="text" id="heroContactText" class="form-control" placeholder="Let's Talk">
+            </div>
+          </form>
+        </div>
+
+        <!-- 2. ABOUT TAB -->
+        <div id="aboutTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">About Me & Terminal</h2>
+              <p class="pane-subtitle">Manage bio description, statistics numbers, and WhoAmI terminal content</p>
+            </div>
+          </div>
+          <form id="aboutForm">
+            <div class="form-group">
+              <label for="aboutBio">About Me Description Paragraph</label>
+              <textarea id="aboutBio" class="form-control" rows="5"></textarea>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 1rem;">Statistics Counter Cards</h3>
+            <div id="statsList"></div>
+
+            <h3 style="margin: 1.5rem 0 1rem;">Terminal Card Content</h3>
+            <div class="form-group">
+              <label for="terminalWhoami">WhoAmI Output</label>
+              <input type="text" id="terminalWhoami" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="terminalInterests">Interests Array String</label>
+              <input type="text" id="terminalInterests" class="form-control" placeholder='["Data Science", "AI/ML"]'>
+            </div>
+            <div class="form-group">
+              <label for="terminalStatus">Status Text</label>
+              <input type="text" id="terminalStatus" class="form-control" placeholder="Ready for new challenges! 🚀">
+            </div>
+          </form>
+        </div>
+
+        <!-- 3. EDUCATION TAB -->
+        <div id="educationTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Education Timeline</h2>
+              <p class="pane-subtitle">Add, edit, or delete degrees and schooling history</p>
+            </div>
+            <button id="addEducationBtn" class="btn-accent btn-sm">+ Add Education</button>
+          </div>
+          <div id="educationList"></div>
+        </div>
+
+        <!-- 4. TRAINING TAB -->
+        <div id="trainingTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Technical Training</h2>
+              <p class="pane-subtitle">Manage internships, bootcamps, and training programs</p>
+            </div>
+            <button id="addTrainingBtn" class="btn-accent btn-sm">+ Add Training</button>
+          </div>
+          <div id="trainingList"></div>
+        </div>
+
+        <!-- 5. SKILLS TAB -->
+        <div id="skillsTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Technical Skills</h2>
+              <p class="pane-subtitle">Manage skill categories, normal skill tags, and highlighted gradient tags</p>
+            </div>
+            <button id="addSkillCatBtn" class="btn-accent btn-sm">+ Add Skill Category</button>
+          </div>
+          <div id="skillsList"></div>
+        </div>
+
+        <!-- 6. PROJECTS TAB -->
+        <div id="projectsTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Featured Projects</h2>
+              <p class="pane-subtitle">Showcase your portfolio projects, images, live links, and code repos</p>
+            </div>
+            <button id="addProjectBtn" class="btn-accent btn-sm">+ Add Project</button>
+          </div>
+          <div id="projectsList"></div>
+        </div>
+
+        <!-- 7. ACHIEVEMENTS TAB -->
+        <div id="achievementsTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Key Achievements</h2>
+              <p class="pane-subtitle">Highlight your rankings, badges, and milestones</p>
+            </div>
+            <button id="addAchievementBtn" class="btn-accent btn-sm">+ Add Achievement</button>
+          </div>
+          <div id="achievementsList"></div>
+        </div>
+
+        <!-- 8. CERTIFICATES TAB -->
+        <div id="certificatesTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">My Certificates</h2>
+              <p class="pane-subtitle">Manage certificate credentials, PDF links, and provider logos</p>
+            </div>
+            <button id="addCertificateBtn" class="btn-accent btn-sm">+ Add Certificate</button>
+          </div>
+          <div id="certificatesList"></div>
+        </div>
+
+        <!-- 9. CONTACT TAB -->
+        <div id="contactTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Contact & Social Links</h2>
+              <p class="pane-subtitle">Update email, location, GitHub, LinkedIn, LeetCode, and Formspree endpoint</p>
+            </div>
+          </div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactHeader">Contact Section Header</label>
+              <input type="text" id="contactHeader" class="form-control" placeholder="Let's talk">
+            </div>
+            <div class="form-group">
+              <label for="contactSubtext">Subtext Description</label>
+              <textarea id="contactSubtext" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="luckylakshya@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="contactLocation">Location</label>
+                <input type="text" id="contactLocation" class="form-control" placeholder="Phagwara, Punjab">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactGithub">GitHub Profile URL</label>
+              <input type="url" id="contactGithub" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="contactLinkedin">LinkedIn Profile URL</label>
+              <input type="url" id="contactLinkedin" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="contactLeetcode">LeetCode Profile URL</label>
+              <input type="url" id="contactLeetcode" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="contactFormspree">Formspree Endpoint URL</label>
+              <input type="text" id="contactFormspree" class="form-control" placeholder="https://formspree.io/f/mvzweygw">
+            </div>
+          </form>
+        </div>
+
+        <!-- 10. SETTINGS & BACKUP TAB -->
+        <div id="settingsTab" class="tab-pane glass-panel" style="padding: 2rem;">
+          <div class="pane-header">
+            <div>
+              <h2 class="pane-title">Admin Credentials & Data Backup</h2>
+              <p class="pane-subtitle">Change security login credentials and manage JSON import/export</p>
+            </div>
+          </div>
+
+          <form id="pinSettingsForm" style="margin-bottom: 2rem;">
+            <h3>Change Admin Credentials</h3>
+            <div class="form-row" style="margin-top: 1rem;">
+              <div class="form-group">
+                <label for="adminUsernameInput">Admin Username</label>
+                <input type="text" id="adminUsernameInput" class="form-control" placeholder="lakshyanunia">
+              </div>
+              <div class="form-group">
+                <label for="newPinInput">New Password</label>
+                <input type="password" id="newPinInput" class="form-control" placeholder="Enter new password">
+              </div>
+              <div class="form-group">
+                <label for="confirmPinInput">Confirm Password</label>
+                <input type="password" id="confirmPinInput" class="form-control" placeholder="Confirm new password">
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-sm">Update Security Credentials</button>
+          </form>
+
+          <hr style="border-color: var(--glass-border); margin: 2rem 0;">
+
+          <h3>Data Import & Export</h3>
+          <p style="color: var(--text-muted); margin: 0.5rem 0 1.5rem;">
+            Export your portfolio dataset to a JSON file to keep a hard backup or transfer it to another browser.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button id="exportJsonBtn" class="btn-accent">📥 Download Backup JSON</button>
+            <label class="btn-secondary" style="cursor: pointer; display: inline-block;">
+              📤 Upload / Import JSON
+              <input type="file" id="importJsonInput" accept=".json" style="display: none;">
+            </label>
+            <button id="resetDefaultsBtn" class="btn-danger">🔄 Reset All Content to Default</button>
+          </div>
+        </div>
+
+        <!-- Sticky Action Footer Bar -->
+        <div class="action-footer glass-panel">
+          <span style="font-size: 0.9rem; color: var(--text-muted);">
+            Changes auto-save locally on save click.
+          </span>
+          <div class="action-buttons">
+            <a href="index.html" class="btn-secondary btn-sm">Preview Portfolio Website</a>
+            <button id="saveAllBtn" class="btn-accent btn-sm" style="font-size: 1rem; padding: 10px 24px;">💾 Save Portfolio Changes</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="js/portfolio-data.js"></script>
+  <script src="admin.js"></script>
+</body>
+
+</html>

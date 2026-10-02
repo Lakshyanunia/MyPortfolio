@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "portfolio-cv",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
