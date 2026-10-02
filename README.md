@@ -6,7 +6,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Lakshyanunia-181717?style=for-the-badge&logo=github)](https://github.com/Lakshyanunia)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lakshyanunia-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/lakshyanunia)
 [![LeetCode](https://img.shields.io/badge/LeetCode-Lakshyanunia-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Lakshyanunia/)
-[![Email](https://img.shields.io/badge/Email-luckylakshya@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:luckylakshya4445@gmail.com)
+[![Email](https://img.shields.io/badge/Email-luckylakshya4445@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:luckylakshya4445@gmail.com)
 
 **A fully dynamic, admin-powered personal portfolio site built with pure HTML, CSS & JavaScript.**
 
