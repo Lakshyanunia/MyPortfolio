@@ -41,7 +41,7 @@ I am **Lakshya Nunia**, a Computer Science & Engineering undergraduate at **Love
 
 ## 🔗 Live Demo
 
-> 🌐 **[View Portfolio →](https://github.com/Lakshyanunia/MyPortfolio)**
+> 🌐 **[View Portfolio →]((https://lakshya-nunia.vercel.app/))**
 
 ---
 
