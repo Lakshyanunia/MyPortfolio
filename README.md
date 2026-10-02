@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![Portfolio Banner](my-profile-photo.jpeg)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Lakshyanunia-181717?style=for-the-badge&logo=github)](https://github.com/Lakshyanunia)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lakshyanunia-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/lakshyanunia)
